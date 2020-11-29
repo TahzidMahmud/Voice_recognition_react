@@ -1,1 +1,4 @@
 # Voice_recognition_react
+
+alan_key=7c216fe9ef86871f1be9cfbe0b5e25042e956eca572e1d8b807a3e2338fdd0dc/stage
+news_api_key=6fb015a987474e7d9eb5ee7ff92f90c1
