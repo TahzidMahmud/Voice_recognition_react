@@ -9,7 +9,7 @@ export default makeStyles({
   card: {
     display: "flex",
     flexDirection: "column",
-    justifyContent: "space-between",
+    justifyContent: "center",
     alignItems: "center",
     width: "100%",
     height: "40vh",
@@ -21,5 +21,6 @@ export default makeStyles({
     display: "flex",
     flexDirection: "column",
     textAlign: "center",
+    padding: 20,
   },
 });

@@ -3,21 +3,25 @@ import alanBtn from "@alan-ai/alan-sdk-web";
 import axios from "axios";
 import NewsCards from "./components/NewsCards/NewsCards";
 import useStyles from "./styles.js";
+import { Typography } from "@material-ui/core";
 const App = () => {
   const [newArticles, setnewArticles] = useState([]);
+  const [activeArticle, setActiveArticle] = useState(-1);
   useEffect(() => {
     alanBtn({
       key:
         "7c216fe9ef86871f1be9cfbe0b5e25042e956eca572e1d8b807a3e2338fdd0dc/stage",
       onCommand: (commandData) => {
         if (commandData.command === "new headlines") {
-          console.log(commandData.saved_articles);
           let articles = commandData.saved_articles;
           setnewArticles(articles);
+          setActiveArticle(-1);
+        } else if (commandData.command === "highlight") {
+          setActiveArticle((prevActiveArticle) => prevActiveArticle + 1);
         }
       },
     });
-    // place holder api code start
+    // place holder api code startnpm
     // let url =
     //   "https://newsapi.org/v2/top-headlines?sources=bbc-news&apiKey=6fb015a987474e7d9eb5ee7ff92f90c1";
     // axios
@@ -36,13 +40,14 @@ const App = () => {
   return (
     <div>
       <div className={classes.logoContainer}>
+        <Typography variant="h1">Powred By</Typography>
         <img
           src="https://alan.app/voice/images/previews/preview.jpg"
           className={classes.alanLogo}
           alt="alan Logo"
         />
       </div>
-      <NewsCards articles={newArticles} />
+      <NewsCards articles={newArticles} activeArticle={activeArticle} />
     </div>
   );
 };

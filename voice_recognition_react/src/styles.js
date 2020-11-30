@@ -56,7 +56,7 @@ export default makeStyles((theme) => ({
   logoContainer: {
     padding: "0 5%",
     display: "flex",
-    justifyContent: "space-around",
+    justifyContent: "center",
     alignItems: "center",
     width: "100%",
     [theme.breakpoints.down("sm")]: {
@@ -65,8 +65,8 @@ export default makeStyles((theme) => ({
     },
   },
   alanLogo: {
-    height: "27vmin",
-    borderRadius: "15%",
+    height: "10vmin",
+    borderRadius: "30%",
     padding: "0 5%",
     margin: "3% 0",
     [theme.breakpoints.down("sm")]: {
