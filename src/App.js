@@ -8,6 +8,19 @@ const App = () => {
   const [newArticles, setnewArticles] = useState([]);
   const [activeArticle, setActiveArticle] = useState(-1);
   useEffect(() => {
+    // speech voice code start
+
+    const speech = new SpeechSynthesisUtterance();
+
+    speech.text =
+      " welcome to the app . This app is fully voice command oriented .Just click the mic button and read the prompts on the cards"; //the real speech
+    speech.volume = 1;
+    speech.rate = 0.9;
+    speech.pitch = 0.8;
+    //listen to the command and talk back
+
+    window.speechSynthesis.speak(speech);
+    // speech voice code end
     alanBtn({
       key:
         "7c216fe9ef86871f1be9cfbe0b5e25042e956eca572e1d8b807a3e2338fdd0dc/stage",
