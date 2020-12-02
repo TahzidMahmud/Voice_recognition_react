@@ -1,3 +1,7 @@
+# This app is to be used in a moder browsers recomended for Google Chrome
+
+    there are few browser apis' used in this app that might not be available out side chrome. So,for best experience use google chrome.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
