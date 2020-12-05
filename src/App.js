@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
-import axios from "axios";
+
 import NewsCards from "./components/NewsCards/NewsCards";
 import useStyles from "./styles.js";
-import { Typography } from "@material-ui/core";
+import { TextareaAutosize, Typography } from "@material-ui/core";
 const App = () => {
   const [newArticles, setnewArticles] = useState([]);
   const [activeArticle, setActiveArticle] = useState(-1);
@@ -60,6 +60,10 @@ const App = () => {
           alt="alan Logo"
         />
       </div>
+      <Typography variant="h4" className={classes.mid}>
+        Commands Available Now Are Following
+      </Typography>
+      <hr></hr>
       <NewsCards articles={newArticles} activeArticle={activeArticle} />
     </div>
   );

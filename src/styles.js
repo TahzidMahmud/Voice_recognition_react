@@ -64,6 +64,11 @@ export default makeStyles((theme) => ({
       textAlign: "center",
     },
   },
+  mid: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
   alanLogo: {
     height: "10vmin",
     borderRadius: "30%",
